@@ -30,11 +30,12 @@ For Unit 1D you will practice what you learned below:
 Create a function called useless_function(), have it return None
 
 Hint: Syntax to create a function:
-
-def <function_name>():
-    return <some value>
-
 '''
+
+def useless_function():
+    return None
+
+
 
 ##################################
 
@@ -43,6 +44,8 @@ def <function_name>():
 Create a function called integer_return_5() that returns the integer 5
 
 '''
+def integer_return_5():
+    return 5
 
 ##################################
 
@@ -51,7 +54,8 @@ Create a function called integer_return_5() that returns the integer 5
 Create a function called string_return_I_am_a_string() that returns the string "I am a string!"
 
 '''
-
+def string_return_I_am_a_string():
+    return "I am a string!"
 ##################################
 
 #### Create a Function Below ####
@@ -59,7 +63,8 @@ Create a function called string_return_I_am_a_string() that returns the string "
 Create a function called add_one(), that takes in a parameter x, adds 1 then returns the value
 
 '''
-
+def add_one(x):
+    return x+1
 ##################################
 
 
@@ -68,7 +73,8 @@ Create a function called add_one(), that takes in a parameter x, adds 1 then ret
 Create a function called add_x_y, that takes in a parameter x, and a parameter y, adds x and y then returns that value
 
 '''
-
+def add_x_y(x,y):
+    return x+y
 ##################################
 
 
@@ -86,6 +92,14 @@ Have the function return x
 
 Hint: Use a for loop to iterate through the list
 '''
+def slope_intercept_function(m:float,x:list,b:float):
+    y=[]
+    i=0
+    while i<len(x):
+        q=x[i]*m+b
+        i=i+1
+        y.append(q)
+    return y
 
 
 ##################################
@@ -104,7 +118,10 @@ Have the function scale the of x by 5 and add 2 to y.
 Have the function return x and y in that order. 
 
 '''
-
+def multi_return(x,y):
+    x=5*x
+    y=y+2
+    return x,y
 ##################################
 
 
@@ -125,7 +142,9 @@ Hint: Look up some methods you can use with a list to help you!
 '''
 
 ##################################
-
+def default_args(x, pre_pend=5):
+    x=[pre_pend]+x
+    return x
 
 ##### Create a Class Below #######
 '''
@@ -133,7 +152,10 @@ Create a class called Car, create an __init__ method (constructor) that takes in
 miles_per_gallon, and assigns it to the attribute `mpg`.
 
 '''
-
+class Car:
+    def __init__(self,miles_per_gallon):
+        self.mpg=miles_per_gallon
+        
 ##################################
 
 ##### Create a Class Below #######
@@ -151,8 +173,15 @@ Note: The get_x functions should not have an input. Ex: def get_weight(self):
 '''
 
 ##################################
-
-
+class Dog:
+    def __init__(self,breed,weight):
+        self.breed=breed
+        self.weight=weight  
+    def get_breed(self):
+        return self.breed 
+    def get_weight(self):
+        return self.weight
+        
 ##### Create a Class Below #######
 '''
 Create a class called Math_Operations
@@ -172,7 +201,15 @@ HINT HINT: You can raise variable and numbers to a fractional (or decimal) expon
 Note: Even though we will not be using self in this class, dont forget to include it as the first
 argument in the method definitions. 
 '''
-
+class Math_Operations:
+    def add(self,a,b):
+        return a+b
+    def sub(self,a,b):
+            return a-b
+    def slope_intercept(self,m,x,b):
+        return m*x+b
+    def pythagorean(self,a,b):
+        return(a**2 + b**2)**(1/2)
  
 if __name__ == "__main__":
     print("Test your functions at the bottom of this file!")
